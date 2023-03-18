@@ -140,14 +140,20 @@ main section::after {
 main section article {
   width: 20%;
   float: left;
-  overflow: hidden;
-  padding: 12px;
+  padding: 1vw;
 }
 main section article .inner {
   width: 100%;
   background: #fff;
   padding: 14px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: 0.5s;
+  transform: scale(1);
+}
+main section article .inner:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px -10px rgba(87, 155, 177, 0.8);
 }
 main section article .inner img {
   width: 100%;
@@ -177,6 +183,7 @@ main section article .inner p {
 }
 @media screen and (max-width: 799px) {
   main section article {
+    padding: 1.5vw;
     width: 33.3333%;
   }
 }
@@ -195,6 +202,7 @@ main section article .inner p {
     margin-left: 0;
   }
   main section article {
+    padding: 15px;
     width: 50%;
   }
 }
