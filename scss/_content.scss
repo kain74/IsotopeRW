@@ -1,0 +1,126 @@
+main {
+    margin-left: 400px;
+    min-height: 600px;
+    padding: 20px 27px;
+    ul {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: flex-end;
+        li{
+            width: 100px;
+            height: 26px;
+            margin-left: 20px;
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                font: bold 7px/26px "orbitron";
+                color: #aaa;
+                letter-spacing: 1px;
+                background-color: #fff;
+                box-shadow: 0px 5px 20px rgba(0,0,0,0.05);
+            }
+            &.on{
+                a{
+                    color: #fff;
+                    background: linear-gradient(-45deg, #ECE8DD, #579BB1);
+                    box-shadow: 0px 5px 20px rgba(87, 155, 177, 0.5);
+                }
+            }
+        }
+    }
+
+    section{
+        width: 100%;
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        article {
+            width: 20%;
+            float: left;
+            overflow: hidden;
+            padding: 12px;
+            .inner{
+                width: 100%;
+                background: #fff;
+                padding: 14px;
+                box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+                img {
+                    width: 100%;
+                }
+                h2 {
+                    font: bold 11px/1 "orbitron";
+                    letter-spacing: 1px;
+                    color: #444;
+                    margin-top: 15px;
+                    margin-bottom: 5px;
+                }
+                p {
+                    font: 10px/1.2 "arial";
+                    color: #777;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $web) {
+    main {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: $tablet) {
+    main{
+        section{
+            article{
+                width: 25%;
+            }
+        }
+    }
+}
+@media screen and (max-width: $mobileM) {
+    main{
+        section{
+            article{
+                width: 33.3333%;
+            }
+        }
+    }
+}
+@media screen and (max-width: $mobileS) {
+    main{
+        padding: 20px 0;
+        ul{
+            padding: 0 12px;
+            justify-content:space-between;
+            li{
+                
+                margin-left: 0;
+                & ~ li{
+                    margin-left: 0;
+                }
+            }
+        }
+        section{
+            article{
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    main{
+        section{
+            article{
+                width: 100%;
+            }
+        }
+    }
+}
